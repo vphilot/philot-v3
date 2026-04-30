@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans:
+    'Darker Grotesque', ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --text-h1-desktop: 5.295rem;
+  --text-h1-mobile: 3.272rem;
+  --text-h2-desktop: 3.273rem;
+  --text-h2-mobile: 2.488rem;
+  --text-body-large-desktop: 2.488rem;
+  --text-body-large-mobile: 2.023rem;
+  --text-body-base: 1.25rem;
+  --text-body-small: 0.772rem;
+}
+
+@layer utilities {
+  .text-h1 {
+    @apply text-h1-mobile lg:text-h1-desktop leading-tight font-light;
+  }
+
+  .text-h2 {
+    @apply text-h2-mobile lg:text-h2-desktop;
+  }
+
+  .text-body-large {
+    @apply text-body-large-mobile lg:text-body-large-desktop leading-none font-light;
+  }
+
+  .text-ui-large {
+    @apply text-body-large-mobile lg:text-body-large-desktop leading-0 font-light;
+  }
+
+  .navbar-link-item-transition {
+    @apply absolute top-0 left-0 h-full w-full border-0 transition-all group-hover:border-4 group-focus:border-4;
+  }
+
+  .navbar-link-item-external-transition {
+    @apply absolute -bottom-0.5 left-0 h-full w-full border-0 transition-all group-hover:border-b-4 group-focus:border-b-4;
+  }
+
+  .nuxt-link-as-button {
+    @apply relative flex w-max cursor-pointer items-center gap-x-4 rounded-full border px-8 py-4 transition-all focus:outline-none;
+  }
+
+  .nuxt-link-as-button-transition {
+    @apply absolute top-0 left-0 h-full w-full rounded-full border-0 transition-all group-hover:border-4 group-focus:border-4;
+  }
+}
