@@ -7,6 +7,12 @@ export default defineNuxtConfig({
   css: ['./app/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['animejs'],
+    },
+  },
+  ngrok: {
+    authtoken: '1ZJYGDDtg97IuHIy0IIvTdo9vKp_WcuABrj3io4HdDE8NMTH',
   },
   fonts: {
     provider: 'local',
@@ -25,11 +31,12 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/content',
+    '@nuxtjs/ngrok',
     '@atoms-studio/nuxt-swiftsearch',
     '@nuxtjs/seo',
     '@nuxtjs/sanity',
     '@morev/vue-transitions',
     '@nuxtjs/eslint-module',
-    '@nuxt/a11y',
+    // '@nuxt/a11y',
   ],
 })

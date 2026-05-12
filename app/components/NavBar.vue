@@ -1,9 +1,15 @@
 <template>
-  {{ data }}
-  <nav class="grid grid-cols-4 *:border *:border-b-0 *:not-last:border-r-0">
+  <nav
+    class="grid grid-cols-1 *:border *:border-b-0 *:not-last:border-r-0 md:grid-cols-2 lg:grid-cols-4"
+  >
     <div class="grid grid-rows-2 self-stretch *:not-last:border-b">
       <div class="flex items-center px-8">
-        <span class="text-h2 title leading-none"> Vinícius Philot </span>
+        <span
+          class="text-h2 title leading-none"
+          data-animate-sup-text-secondary
+        >
+          Vinícius Philot
+        </span>
       </div>
       <div class="flex items-center px-8 py-4 leading-none">
         <span class="text-h2"> UI Engineer </span>
@@ -13,6 +19,7 @@
       class="grid grid-rows-3 self-stretch *:relative *:flex *:items-center *:gap-x-2 *:px-8 *:py-4 *:not-last:border-b"
     >
       <NuxtLink
+        data-animate-sup-text-secondary
         to="/home"
         class="group w-full focus:outline-none"
         @mouseenter="handleMouseEnter('home')"
@@ -23,6 +30,7 @@
         <span class="text-body-large leading-none"> Home </span>
       </NuxtLink>
       <NuxtLink
+        data-animate-sup-text-secondary
         to="/home"
         class="group focus:outline-none"
         @mouseenter="handleMouseEnter('work')"
@@ -33,6 +41,7 @@
         <span class="text-body-large leading-none"> Work </span>
       </NuxtLink>
       <NuxtLink
+        data-animate-sup-text-secondary
         to="/home"
         class="group focus:outline-none"
         @mouseenter="handleMouseEnter('blog')"
@@ -60,34 +69,19 @@
       </div>
     </div>
     <div class="flex flex-col items-start gap-y-4 self-stretch p-8">
-      <NuxtLink
-        external
-        href="https://google.com"
-        target="_blank"
-        class="group relative flex gap-x-2 focus:outline-none"
+      <ExternalLink
+        href="https://www.google.com/maps/place/São+Pedro+da+Serra,+Nova+Friburgo+-+State+of+Rio+de+Janeiro,+28616-155,+Brazil/@-22.3190335,-42.3577406,21328m/data=!3m1!1e3!4m6!3m5!1s0x97ecc6bc6c0657:0x7625000c6484f178!8m2!3d-22.3169831!4d-42.3306174!16s%2Fg%2F1tjjqlc2?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+        inline
       >
-        <div class="navbar-link-item-external-transition" />
-        <Icon name="philot-icon:link" class="size-6" mode="svg" />
-        <span
-          class="text-body-large leading-none underline decoration-2 underline-offset-4"
-        >
-          linkedin
-        </span>
-      </NuxtLink>
-      <NuxtLink
-        external
-        href="https://google.com"
-        target="_blank"
-        class="group relative flex gap-x-2 focus:outline-none"
+        linkedin
+      </ExternalLink>
+
+      <ExternalLink
+        href="https://www.google.com/maps/place/São+Pedro+da+Serra,+Nova+Friburgo+-+State+of+Rio+de+Janeiro,+28616-155,+Brazil/@-22.3190335,-42.3577406,21328m/data=!3m1!1e3!4m6!3m5!1s0x97ecc6bc6c0657:0x7625000c6484f178!8m2!3d-22.3169831!4d-42.3306174!16s%2Fg%2F1tjjqlc2?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+        inline
       >
-        <div class="navbar-link-item-external-transition" />
-        <Icon name="philot-icon:link" class="size-6" mode="svg" />
-        <span
-          class="text-body-large leading-none underline decoration-2 underline-offset-4"
-        >
-          github
-        </span>
-      </NuxtLink>
+        github
+      </ExternalLink>
     </div>
   </nav>
 </template>

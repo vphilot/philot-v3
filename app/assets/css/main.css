@@ -20,7 +20,7 @@
   }
 
   .text-h2 {
-    @apply text-h2-mobile lg:text-h2-desktop;
+    @apply text-h2-mobile lg:text-h2-desktop font-light;
   }
 
   .text-body-large {
@@ -31,12 +31,16 @@
     @apply text-body-large-mobile lg:text-body-large-desktop leading-0 font-light;
   }
 
-  .navbar-link-item-transition {
-    @apply absolute top-0 left-0 h-full w-full border-0 transition-all group-hover:border-4 group-focus:border-4;
+  .text-ui-base {
+    @apply text-body-base tracking-wide;
   }
 
-  .navbar-link-item-external-transition {
-    @apply absolute -bottom-0.5 left-0 h-full w-full border-0 transition-all group-hover:border-b-4 group-focus:border-b-4;
+  .text-ui-small {
+    @apply text-body-small;
+  }
+
+  .navbar-link-item-transition {
+    @apply absolute top-0 left-0 h-full w-full border-0 transition-all group-hover:border-4 group-focus:border-4;
   }
 
   .nuxt-link-as-button {
