@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     authtoken: '1ZJYGDDtg97IuHIy0IIvTdo9vKp_WcuABrj3io4HdDE8NMTH',
   },
   fonts: {
-    provider: 'local',
+    provider: 'google',
   },
   icon: {
     customCollections: [

@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="grid grid-cols-1 *:border *:border-b-0 *:not-last:border-r-0 md:grid-cols-2 lg:grid-cols-4"
+    class="grid grid-cols-1 *:border *:border-r-0 *:border-b-0 md:grid-cols-2 md:*:not-last:border-r-0 lg:grid-cols-4"
   >
     <div class="grid grid-rows-2 self-stretch *:not-last:border-b">
       <div class="flex items-center px-8">
@@ -53,7 +53,7 @@
         <span class="text-body-large leading-none"> Blog </span>
       </NuxtLink>
     </div>
-    <div class="flex items-center self-stretch px-8">
+    <div class="flex items-center self-stretch px-8 py-4 md:py-0">
       <div class="flex flex-col">
         <span class="text-h2 mb-2 leading-none"> Toronto, 31 C </span>
         <span class="text-body-base">
@@ -68,7 +68,9 @@
         </span>
       </div>
     </div>
-    <div class="flex flex-col items-start gap-y-4 self-stretch p-8">
+    <div
+      class="flex flex-col items-start gap-y-2 self-stretch px-8 py-4 md:gap-y-4 md:py-8"
+    >
       <ExternalLink
         href="https://www.google.com/maps/place/São+Pedro+da+Serra,+Nova+Friburgo+-+State+of+Rio+de+Janeiro,+28616-155,+Brazil/@-22.3190335,-42.3577406,21328m/data=!3m1!1e3!4m6!3m5!1s0x97ecc6bc6c0657:0x7625000c6484f178!8m2!3d-22.3169831!4d-42.3306174!16s%2Fg%2F1tjjqlc2?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
         inline

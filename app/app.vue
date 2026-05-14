@@ -1,7 +1,7 @@
 <template>
   <main
     data-animate="scroll-container"
-    class="relative h-screen overflow-y-auto bg-gray-50"
+    class="relative h-screen overflow-x-hidden overflow-y-auto bg-gray-50"
   >
     <h1 class="sr-only">Home</h1>
     <NavBar />
@@ -11,9 +11,7 @@
     >
       toggle dev mode
     </button>
-    <section
-      class="grid grid-cols-4 *:border *:border-b-0 *:not-last:border-r-0"
-    >
+    <section class="grid grid-cols-4 *:border *:border-r-0 *:border-b-0">
       <div class="col-span-4 p-8 xl:col-span-2">
         <div class="flex gap-x-2" data-animate-sup-container>
           <h2 class="text-h1" data-animate-sup-heading>sup</h2>
@@ -78,9 +76,7 @@
     </section>
 
     <!-- motto & stack -->
-    <section
-      class="grid grid-cols-4 *:border *:border-b-0 *:not-last:border-r-0"
-    >
+    <section class="grid grid-cols-4 *:border *:border-r-0 *:border-b-0">
       <div class="col-span-4 xl:col-span-2">
         <div class="p-8">
           <h2 class="text-h1">Motto</h2>
@@ -173,9 +169,7 @@
     </section>
 
     <!-- background -->
-    <section
-      class="grid grid-cols-4 *:border *:border-b-0 *:not-last:border-r-0"
-    >
+    <section class="grid grid-cols-4 *:border *:border-r-0 *:border-b-0">
       <div class="relative col-span-4 min-h-96 bg-gray-100 p-8 xl:col-span-2">
         <AnimatableIconWork
           class="absolute -top-1 -left-1 box-border h-[calc(100%+(--spacing(2)))] w-auto shrink-0 stroke-black [stroke-linecap:square] [stroke-linejoin:miter] *:data-background:stroke-gray-300 *:data-background:stroke-[0.15]"
@@ -263,7 +257,7 @@
       </div>
       <div class="relative col-span-4 bg-gray-100 p-8 xl:col-span-2">
         <div
-          class="absolute top-0 left-0 box-border h-auto w-auto min-w-full shrink-0 xl:h-[calc(100%+(--spacing(2)))]"
+          class="absolute top-0 left-0 box-border h-auto w-full shrink-0 xl:h-[calc(100%+(--spacing(2)))]"
         >
           <AnimatableIconBlog
             class="h-full w-full stroke-black [stroke-linecap:butt] [stroke-linejoin:miter] *:data-background:stroke-gray-300 *:data-background:stroke-[0.15]"
